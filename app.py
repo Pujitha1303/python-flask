@@ -32,7 +32,7 @@ JOBS=[
 ]
 @app.route("/")
 def index():
-    return render_template('home.html', jobs=JOBS , title='boat-page')
+    return render_template('home.html', jobs=JOBS , title='carrerspage')
 
 @app.route("/jobs")
 def list_jobs():

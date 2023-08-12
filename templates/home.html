@@ -11,25 +11,43 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right:auto;
+        /* margin:0 auto 100 auto; */
       }
      </style>
   </head>
   <body>
+    {%include 'nav.html'%}
+    <img class="img-fluid" id="banner" src="/static/picture1.jpg">
     <div class="container">
     <h1 class="text-center mt-2 mb-4">
       this is the {{title}}!
     </h1>
-    <img class="img-fluid" id="banner" src="http://127.0.0.1:8001/static/banner.jpeg">
+    <div class="row" style="margin-bottom: 16px;">
+      <div class="col-md-8">
+            <p>
+              The Oxford English Dictionary defines the word "career" as a person's "course or progress through life (or a distinct portion of life)". This definition relates "career" to a range of aspects of an individual's life, learning, and work. "Career" is also frequently understood[by whom?] to relate to the working aspects of an individual's life - as in "career woman", for example. A third way in which the term "career" is used describes an occupation or a profession that usually involves special training or formal education,[1] considered[by whom?] to be a person's lifework.[2][failed verification] In this case "a career" is seen[by whom?] as a sequence of related jobs, usually pursued within a single industry or sector: one can speak for example of "a career in education", of "a criminal career" or of "a career in the building trade". A career has been defined by organizational behavior researchers as "an individual's work-related and other relevant experiences, both inside and outside of organizations, that form a unique pattern over the individual's life span."[3]
+
+
+            </p>
+      </div>
+          <div class="d-none d-md-block col-4">
+            <img src="/static/picture2.jpg" style="height: 250px; border-radius: 4px;">
+          </div>
+    </div>
     <h2 class="text-center"> Job openings</h2>  
    <div>
     {%for job in jobs%}
        {%include 'jobitem.html'%}
     {%endfor%}
    </div>
-    <h2 class="text-center mt-2 mb-4"> some buttons</h2>
+
     <div class="text-center">
        <button class="btn btn-primary btn-lg"> contact us</button>
     </div>
   </div>
+  {%include 'footer.html'%}
   </body>
 </html>
