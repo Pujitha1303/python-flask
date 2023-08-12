@@ -26,6 +26,7 @@ JOBS=[
         'id':4,
         'title':'Backend',
         'location':'USA',
+        'salary':'$20,200'
     }
 
 ]
